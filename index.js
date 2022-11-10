@@ -4,6 +4,8 @@ import mongoose from "mongoose";
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import authRoute from './routes/auth.js'
+const router  = express.Router();
+
 
 const app = express();
 dotenv.config();
@@ -26,7 +28,9 @@ app.use(cookieParser());
 app.use(cors());
 app.use(express.json());
 
-
+router.get('/check',()=>{
+    res.status(200).send("good health");
+});
 app.use('/api/auth',authRoute);
 
 app.use((err,req,res,next)=>{

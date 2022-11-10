@@ -10,14 +10,14 @@ const router  = express.Router();
 const app = express();
 dotenv.config();
 
-const connect = async () => {
-    try {
-        await mongoose.connect(process.env.MONGO);
-        console.log("mongodb connected!");
-    } catch (error) {
-        throw error;
-    }
-};
+// const connect = async () => {
+//     try {
+//         await mongoose.connect(process.env.MONGO);
+//         console.log("mongodb connected!");
+//     } catch (error) {
+//         throw error;
+//     }
+// };
 
 app.listen("8800",()=>{
     connect();

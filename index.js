@@ -19,16 +19,17 @@ dotenv.config();
 //     }
 // };
 
-app.listen("8800",()=>{
-    // connect();
-    console.log("connected to backend.");
-});
+// app.listen("8800",()=>{
+//     // connect();
+//     console.log("connected to backend.");
+// });
 
 app.use(cookieParser());
 app.use(cors());
 app.use(express.json());
 
-router.get('/check',()=>{
+router.get('/',()=>{
+    console.log("letsgo")
     res.status(200).send("good health");
 });
 app.use('/api/auth',authRoute);

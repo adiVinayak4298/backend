@@ -23,10 +23,11 @@ dotenv.config();
 //     // connect();
 //     console.log("connected to backend.");
 // });
-
+console.log("26")
 app.use(cookieParser());
 app.use(cors());
 app.use(express.json());
+console.log("30")
 
 router.get('/',()=>{
     console.log("letsgo")

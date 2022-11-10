@@ -20,7 +20,7 @@ dotenv.config();
 // };
 
 app.listen("8800",()=>{
-    connect();
+    // connect();
     console.log("connected to backend.");
 });
 
